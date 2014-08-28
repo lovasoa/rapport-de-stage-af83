@@ -46,6 +46,22 @@ J'ai eu la chance de ne jamais me faire confier de tâches ingrates, et ai pu
 travailler sur des sujets qui m'intéressaient vraiment.
 
 ### Les calendriers
+L'une des tâches sur lesquelles j'ai le plus travaillé est la mise en place des calendriers.
+MAP propose des calendriers personnalisables à ses clients, sur lesquels ils peuvent
+intégrer leurs propres photos.
+
+Ce type de produit constituait un petit défi technique, car contrairement aux autres,
+il contient un "fond", le calendrier lui-même, qui doit être dessiné indépendemment
+des images ajoutées par l'utilisateur.
+
+Il s'agissait tout d'abord de choisir un format de description des grilles de calendrier,
+ce qui est en soi assez délicat. Si l'on choisit un format trop générique, alors
+il y a potentiellement beaucoup de code à écrire pour gérer toutes les possibilités
+offertes par le format. Si l'on choisit un format trop restreint, alors on risque 
+de se retrouver bloqué dans le futur, lorsque MAP demandera une nouvelle grille
+plus originale.
+
+
 
 ### Organisation du travail
 
