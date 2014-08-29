@@ -170,7 +170,8 @@ beaucoup appréciée, et qui permet de garder sa motivation à travailler.
 ### Déceptions
 
 En dépit de tous les points qui font que ce stage a été une période agréable,
-il y a un point sur lequel j'ai été déçu.
+certains points m'ont déçus, ou fait peur, concernant le domaine auquel
+je me destine.
 
 #### Rémunération
 Ce point est malheureusement très courant lors de stages, quels qu'ils soient.
@@ -191,12 +192,35 @@ excitant qu'il ne l'était pour moi qui n'ai passé que peu de temps au contact 
 
 ## Ce que j'ai appris
 
-J'ai appris à utiliser *vim*, à jouer au *babyfoot*, et à ouvrir des b***** avec un briquet.
-Mais je dois encore me perfectionner dans tous ces domaines.
+### Compétences techniques
+#### Vim
+Ce stage a été l'occasion de découvrir l'éditeur de texte
+[vim](https://fr.wikipedia.org/wiki/Vim), un éditeur de texte peu intuitif mais
+extrêmement personnalisable et qui permet une bien meilleure productivité que
+ceux que j'utilisais avant. *Vim* est aujourd'hui mon éditeur de texte préféré,
+que j'utilise presque exclusivement pour programmer.  Ce rapport lui-même a été
+écrit sous *vim*.
 
-D'autre part, j'ai aussi appris à utiliser [backbone](http://backbonejs.org/), je me
-suis perfectionné en [Coffeescript](http://coffeescript.org/), j'ai eu
-l'occasion de faire de la [programmation en binôme](https://fr.wikipedia.org/wiki/Programmation_en_bin%C3%B4me) pour la
+#### Bibliothèques et langages
+J'ai aussi appris à utiliser [backbone](http://backbonejs.org/), une bibliothèque
+qui permet de construire des applications web complexes et d'en articuler les
+différents composants. J'ai découvert à la fois les avantages qu'apporte cette
+bibliothèque et les problèmes auxquels elle oblige à se cofronter.
+
+Je me suis perfectionné en [Coffeescript](http://coffeescript.org/), un langage
+qui se compile vers du *Javascript*, et que je connaissais depuis moins d'un an.
+
+### Autres compétences
+
+#### Travail en équipe
+J'ai eu l'occasion de faire de la [programmation en
+binôme](https://fr.wikipedia.org/wiki/Programmation_en_bin%C3%B4me) pour la
 première fois, ce qui est très formateur, et de manière générale, j'ai appris à
-travailler en équipe.
+travailler en équipe sur un gros projet.
 
+#### Vie de l'entreprise
+J'ai également  découvert à l'occasion de ce stage la vie en entreprise, les
+relations entre collègues, parfois très différentes des relations entre étudiant.
+
+J'ai, je pense, beaucoup progressé au *babyfoot*, et me suis fait de nouveaux
+amis.
