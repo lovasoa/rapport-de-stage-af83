@@ -220,7 +220,7 @@ travailler en équipe sur un gros projet.
 
 #### Vie de l'entreprise
 J'ai également  découvert à l'occasion de ce stage la vie en entreprise, les
-relations entre collègues, parfois très différentes des relations entre étudiant.
+relations entre collègues, parfois très différentes des relations entre étudiants.
 
 J'ai, je pense, beaucoup progressé au *babyfoot*, et me suis fait de nouveaux
 amis.
