@@ -45,7 +45,12 @@ Il n'y a pas dans cette entreprise
 J'ai eu la chance de ne jamais me faire confier de tâches ingrates, et ai pu
 travailler sur des sujets qui m'intéressaient vraiment.
 
-### Les calendriers
+Cepedant, j'ai travaillé sur plusieurs domaines différents, j'ai pu me pencher
+sur l'architecture d'un projet complexe, mais ai aussi effectué du débogage. Je
+ne présenterai ici qu'une partie des tâches que j'ai effectuées, les plus intéressantes
+et représentatives de mon travail, je l'espère.
+
+#### Les calendriers
 L'une des tâches sur lesquelles j'ai le plus travaillé est la mise en place des calendriers.
 MAP propose des calendriers personnalisables à ses clients, sur lesquels ils peuvent
 intégrer leurs propres photos.
@@ -61,7 +66,49 @@ offertes par le format. Si l'on choisit un format trop restreint, alors on risqu
 de se retrouver bloqué dans le futur, lorsque MAP demandera une nouvelle grille
 plus originale.
 
+Le format SVG s'est finalement imposé, car bien que très générique, il est géré
+nativement dans tous les navigateurs modernes, ce qui permet d'économiser du travail de développement.
 
+Comme j'avais travaillé avec ce format auparavant pour d'autres projets, j'ai été
+très heureux de pouvoir être utile à l'équipe, en participant à l'écriture de la première
+grille en SVG, et en écrivant du code pour sa manipulation.
+
+#### Promesses
+Les [promesses](https://fr.wikipedia.org/wiki/Futures_%28informatique%29) constituent
+une technique de programmation asynchrone intéressante que j'ai apprise et utilisée
+pendant mon stage.
+
+Travailler sur une application qui tourne dans le navigateur nous met face à des
+problèmes que l'on ne rencontre pas sur des applications de bureau classiques, et
+que l'on peut parfois résoudre de manière élégante avec certains schémas de programmation.
+
+Notamment, lorsque l'utilisateur charge une page, on ne peut pas se permettre de
+lui faire attendre plusieurs minutes avant d'afficher l'application. On ne peut
+donc pas non plus se permettre de télécharger à l'avance, "au cas où", tous les
+fichiers dont l'application pourrait avoir besoin. Les ressources doivent être chargées
+dynamiquement, dès qu'elles sont nécessaires.
+
+Il arrive donc que l'application se retrouve dans un état où elle a besoin d'une
+resource qui n'a pas encore été chargée. Elle peut alors utiliser une *promesse*,
+un objet qui symbolise la resource, qui peut être chargée ou non.
+
+Alors, au lieu de
+* regarder si la resource est chargée,
+* si elle l'est, faire une opération dessus,
+* sinon, programmer une opération pour qu'elle soit effectuée lorsque la resource sera chargée,
+on peut simplement
+* dire qu'il faut faire telle opération sur telle resource.
+Le [système de promesses](https://www.promisejs.org/) s'occuppe alors de gérer
+le chargement de la resource.
+
+Cette technique de programmation devient particulièrement intéressante lorsque
+l'on manipule plusieurs resources qui peuvent avoir différents état de chargement.
+On [agrège](https://www.promisejs.org/patterns/#all) alors leurs promesses, on manipule
+la promesse résultante.
+
+Dans MAP, les promesses sont utilisées notamment pour le chargement des évènements
+de calendrier, des polices de caractère et des pictogrammes associés aux grilles,
+qui doivent tous être chargés pour pouvoir dessiner les pages de calendrier.
 
 ### Organisation du travail
 
