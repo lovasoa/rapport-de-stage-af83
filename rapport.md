@@ -7,7 +7,7 @@
 ### L’entreprise
 
 AF83 est une agence web française, qui a des bureaux à Paris et San Francisco.
-J'ai travaillé dans les locaux parisiens, situés rue Poisonnière.
+J'ai travaillé dans les locaux parisiens, situés rue Poissonnière.
 On y travaille sur de nombreux projets, utilisant les technologies du web pour
 créer des applications pour des clients tels que Canal+, France Télévision, ou EDF.
 
