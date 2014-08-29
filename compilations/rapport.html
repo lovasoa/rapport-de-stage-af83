@@ -1,85 +1,98 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
-  <meta name="generator" content="pandoc" />
-  <meta name="author" content="Ophir LOJKINE" />
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Ophir LOJKINE">
   <title>Rapport de stage</title>
   <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 <body>
-<div id="header">
+<header>
 <h1 class="title">Rapport de stage</h1>
 <h2 class="author">Ophir LOJKINE</h2>
 <h3 class="date">Été 2014</h3>
-</div>
+</header>
 <h2 id="contexte">Contexte</h2>
 <h3 id="lentreprise">L’entreprise</h3>
-<p>AF83 est une agence web française, qui a des bureaux à Paris et San Francisco. J'ai travaillé dans les locaux parisiens, situés rue Poisonnière. On y travaille sur de nombreux projets, utilisant les technologies du web pour créer des applications pour des clients tels que Canal+, France Télévision, ou EDF.</p>
+<p>AF83 est une agence web française, qui a des bureaux à Paris et San Francisco. J'ai travaillé dans les locaux parisiens, situés rue Poissonnière. On y travaille sur de nombreux projets, utilisant les technologies du web afin de créer des applications pour des clients tels que Canal+, France Télévision, ou EDF.</p>
 <h3 id="le-projet">Le projet</h3>
-<p>L’entreprise mène de nombreux projets. Je n’ai travaillé que sur un seul: MAP. C’est le nom donné en interne au projet monalbumphoto.fr. Monalbumphoto est une société d'impression d'albums photos destinée aux particuliers. Les albums photos sont entièrement personnalisés par le client, originellement à l'aide d'une application à installer avant de pouvoir commencer la création.</p>
-<p>L'application native, disponible uniquement pour Microsoft Windows, privait la société de clients potentiels, et augmentait le temps entre la découverte du site et le débuit de la création d'un album.</p>
+<p>L’entreprise mène de nombreux projets. Je n’ai travaillé que sur l'un d'entre eux: MAP. C’est le nom donné en interne au projet monalbumphoto.fr. Monalbumphoto est une société d'impression d'albums photo destinée aux particuliers. Les albums photo sont entièrement personnalisés par le client, originellement à l'aide d'une application à installer avant de pouvoir commencer la création.</p>
+<p>L'application native, disponible uniquement pour Microsoft Windows, privait la société de clients potentiels, et augmentait le temps entre la découverte du site et le début de la création d'un album.</p>
 <p>Monalbumphoto.fr a donc fait appel à AF83 afin de créer une application de création d'albums photos qui tourne directement dans le navigateur web du client, sur le même site qui présente les produits.</p>
 <p><a href="http://www.monalbumphoto.fr/creations/new?reference=RIG_210x297">Cette application</a> est déjà en place, et est proposée par défaut aux consommateurs sous Mac OS ou Linux sur certains produits. À l'heure de l'écriture de ce rapport, l'application native est encore le seul choix disponible pour les utilisateurs de Windows, mais cela est amené à changer.</p>
 <h2 id="déroulement-du-stage">Déroulement du stage</h2>
 <h3 id="découverte-de-lentreprise">Découverte de l'entreprise</h3>
-<p>La première chose qui frappe lorsque l'on rentre chez AF83, c'est l'atmosphère décontractée qui y règne, à des lieues de ce l'on nous a décrit bien souvent comme le monde du travail.</p>
-<p>Il n'y a pas dans cette entreprise</p>
+<p>La première chose qui frappe lorsque l'on rentre chez AF83, c'est l'atmosphère décontractée qui y règne, à des lieues de ce que l'on nous a décrit bien souvent comme le monde du travail.</p>
+<p>Il n'y a pas dans cette entreprise de hiérarchie très forte, ni d'horaires de travail très contraignants.</p>
 <h3 id="ce-que-jai-fait">Ce que j'ai fait</h3>
-<p>J'ai eu la chance de ne jamais me faire confier de tâches ingrates, et ai pu travailler sur des sujets qui m'intéressaient vraiment.</p>
-<p>En conséquence, j'ai travaillé sur plusieurs domaines différents, j'ai pu me pencher sur l'architecture d'un projet complexe, mais ai aussi effectué du débogage. Je ne présenterai donc ici qu'une partie des tâches que j'ai effectuées, les plus intéressantes et représentatives de mon travail, je l'espère.</p>
+<p>J'ai eu la chance de ne jamais me faire confier de tâches ingrates et ai pu travailler sur des sujets qui m'intéressaient vraiment.</p>
+<p>En conséquence, j'ai travaillé sur plusieurs domaines différents, j'ai pu me pencher sur l'architecture d'un projet complexe, mais ai aussi effectué du débogage. Je ne présenterai donc ici qu'une partie des tâches que j'ai effectuées, les plus représentatives de mon travail et aussi, je l'espère, les plus intéressantes.</p>
 <h4 id="les-calendriers">Les calendriers</h4>
-<p>L'une des tâches sur lesquelles j'ai le plus travaillé est la mise en place des calendriers. MAP propose des calendriers personnalisables à ses clients, sur lesquels ils peuvent intégrer leurs propres photos.</p>
-<p>Ce type de produit constituait un petit défi technique, car contrairement aux autres, il contient un &quot;fond&quot;, le calendrier lui-même, qui doit être dessiné indépendemment des images ajoutées par l'utilisateur.</p>
-<p>Il s'agissait tout d'abord de choisir un format de description des grilles de calendrier, ce qui est en soi assez délicat. Si l'on choisit un format trop générique, alors il y a potentiellement beaucoup de code à écrire pour gérer toutes les possibilités offertes par le format. Si l'on choisit un format trop restreint, alors on risque de se retrouver bloqué dans le futur, lorsque MAP demandera une nouvelle grille plus originale.</p>
+<p>L'une des tâches sur lesquelles j'ai le plus travaillé est la mise en place des calendriers. MAP propose des calendriers personnalisables à ses clients, dans lesquels ils peuvent intégrer leurs propres photos.</p>
+<p>Ce type de produit constituait un petit défi technique, car contrairement aux autres, il contient un &quot;fond&quot;, la structure du calendrier, qui doit être dessiné indépendamment des images ajoutées par l'utilisateur.</p>
+<p>Il s'agissait tout d'abord de choisir un format de description des grilles de calendrier, ce qui est en soi assez délicat. Si l'on choisit un format trop générique, on risque de devoir écrire beaucoup de code pour gérer toutes les possibilités offertes par le format. Si l'on choisit un format trop restreint, alors on risque de se retrouver bloqué dans le futur, lorsque MAP demandera une nouvelle grille plus originale.</p>
 <p>Le format SVG s'est finalement imposé, car bien que très générique, il est géré nativement dans tous les navigateurs modernes, ce qui permet d'économiser du travail de développement.</p>
 <p>Comme j'avais travaillé avec ce format auparavant pour d'autres projets, j'ai été très heureux de pouvoir être utile à l'équipe, en participant à l'écriture de la première grille en SVG, et en écrivant du code pour sa manipulation.</p>
 <h4 id="promesses">Promesses</h4>
 <p>Les <a href="https://fr.wikipedia.org/wiki/Futures_%28informatique%29">promesses</a> constituent une technique de programmation asynchrone intéressante que j'ai apprise et utilisée pendant mon stage.</p>
 <p>Travailler sur une application qui tourne dans le navigateur nous met face à des problèmes que l'on ne rencontre pas sur des applications de bureau classiques, et que l'on peut parfois résoudre de manière élégante avec certains schémas de programmation.</p>
 <p>Notamment, lorsque l'utilisateur charge une page, on ne peut pas se permettre de lui faire attendre plusieurs minutes avant d'afficher l'application. On ne peut donc pas non plus se permettre de télécharger à l'avance, &quot;au cas où&quot;, tous les fichiers dont l'application pourrait avoir besoin. Les ressources doivent être chargées dynamiquement, dès qu'elles sont nécessaires.</p>
-<p>Il arrive donc que l'application se retrouve dans un état où elle a besoin d'une resource qui n'a pas encore été chargée. Elle peut alors utiliser une <em>promesse</em>, un objet qui symbolise la resource, qui peut être chargée ou non.</p>
+<p>Il arrive donc que l'application se retrouve dans un état où elle a besoin d'une ressource qui n'a pas encore été chargée. Elle peut alors utiliser une <em>promesse</em>, un objet qui symbolise la ressource, qui peut être chargée ou non.</p>
 <p>Alors, au lieu de</p>
 <ul>
-<li>regarder si la resource est chargée,</li>
+<li>regarder si la ressource est chargée,</li>
 <li>si elle l'est, faire une opération dessus,</li>
-<li>sinon, programmer une opération pour qu'elle soit effectuée lorsque la resource sera chargée,</li>
+<li>sinon, programmer une opération pour qu'elle soit effectuée lorsque la ressource sera chargée,</li>
 </ul>
 <p>on peut simplement</p>
 <ul>
-<li>dire qu'il faut faire telle opération sur telle resource.</li>
+<li>dire qu'il faut faire telle opération sur telle ressource.</li>
 </ul>
-<p>Le <a href="https://www.promisejs.org/">système de promesses</a> s'occuppe alors de gérer le chargement de la resource.</p>
-<p>Cette technique de programmation devient particulièrement intéressante lorsque l'on manipule plusieurs resources qui peuvent avoir différents état de chargement. On <a href="https://www.promisejs.org/patterns/#all">agrège</a> alors leurs promesses, on manipule la promesse résultante.</p>
-<p>Dans MAP, les promesses sont utilisées notamment pour le chargement des évènements de calendrier, des polices de caractère et des pictogrammes associés aux grilles, qui doivent tous être chargés pour pouvoir dessiner les pages de calendrier.</p>
+<p>Le <a href="https://www.promisejs.org/">système de promesses</a> s'occupe alors de gérer le chargement de la ressource.</p>
+<p>Cette technique de programmation devient particulièrement intéressante lorsque l'on manipule plusieurs ressources qui peuvent avoir différents état de chargement. On <a href="https://www.promisejs.org/patterns/#all">agrège</a> alors leurs promesses et on manipule la promesse résultante.</p>
+<p>Dans MAP, les promesses sont utilisées notamment pour le chargement des événements de calendrier, des polices de caractère et des pictogrammes associés aux grilles, qui doivent tous être chargés pour pouvoir dessiner les pages de calendrier.</p>
 <h3 id="organisation-du-travail-gestion-de-projet">Organisation du travail, gestion de projet</h3>
 <p>Le projet est développé en utilisant la <a href="https://fr.wikipedia.org/wiki/M%C3%A9thode_agile">méthode agile</a>, censée accélérer le développement et permettre de suivre au plus près les besoins du client, même si ceux-ci changent.</p>
 <p>Au lieu d'avoir, par exemple une <a href="https://fr.wikipedia.org/wiki/Cycle_en_V">méthode dite &quot;en V&quot;</a>, où l'on passe un certain temps à élaborer l'architecture du code, mais où l'on ne programme rien, on s'intéresse à l'implémentation concrète des concepts au fur et à mesure qu'on les élabore.</p>
 <h4 id="communication-avec-le-client">Communication avec le client</h4>
-<p>Cela nécessite bien sûr une très bonne organisation, pour ne pas perdre du temps à écrire du code jetable, mais cela permet d'avancer rapidement sur un projet, et de s'adapter aux demandes du client au fur et à mesure qu'elles arrivent.</p>
-<p>Le projet MAP est ainsi organisé en &quot;sprints&quot; de quelques semaines, séparés par des réunions avec le client. J'ai eu l'occasion d'assister à deux réunions, tout d'abord par téléphone parce que j'étais à Nantes, puis physiquement à Paris. Ces réunions, organisées dans un cadre assez peu formel, commencent par une démonstration des fonctionnalités qui ont été codées lors du sprint précédent, suivie d'une discussion avec le client et de l'établissement de la liste des points à traiter lors du sprint suivant.</p>
-<p>Le projet est associé à un chef de projet, qui est très proche des développeurs. Loin d'être une autorité qui pèse sur les développeurs ou leur impose ses choix, il s'occuppe principalement de la gestion de la communication avec le client, du déploiement et du test du code, et de la gestion des erreurs qui peuvent survenir sur les serveurs en production ou chez les clients.</p>
+<p>Cela nécessite bien sûr une très bonne organisation, pour ne pas perdre du temps à écrire du code jetable, mais cela permet d'avancer rapidement sur un projet, et de s'adapter aux demandes du client au fur et à mesure qu'il les formule.</p>
+<p>Le projet MAP est ainsi organisé en &quot;sprints&quot; de quelques semaines, séparés par des réunions avec le client. J'ai eu l'occasion d'assister à deux réunions, tout d'abord par téléphone depuis Nantes, puis physiquement à Paris. Ces réunions, organisées dans un cadre assez peu formel, commencent par une démonstration des fonctionnalités qui ont été codées lors du sprint précédent, suivie d'une discussion avec le client et de l'établissement de la liste des points à traiter lors du sprint suivant.</p>
+<p>Le travail est coordonné par un chef de projet, qui est très proche des développeurs. Il s'occupe principalement de la gestion de la communication avec le client, du déploiement et du test du code, et de la gestion des erreurs qui peuvent survenir sur les serveurs en production ou chez les clients.</p>
 <h4 id="communication-interne">Communication interne</h4>
-<p>Tout est fait pour faciliter la communication entre développeurs, et avec le chef de projet. Les bureaux d'AF83 sont en fait un grand open-space, et les développeurs s'adressent les uns aux autres lorsqu'ils en ont besoin.</p>
+<p>Tout est fait pour faciliter la communication entre développeurs et avec le chef de projet. Les bureaux d'AF83 sont en fait un grand <em>open-space</em>, et les développeurs s'adressent les uns aux autres lorsqu'ils en ont besoin.</p>
 <p>La communication interne est également facilitée par plusieurs outils:</p>
 <ul>
 <li><a href="http://trello.com">Trello</a>, qui est utilisé comme un gestionnaire de tâches. À chaque action à faire on associe une &quot;carte trello&quot;, à laquelle on peut associer une ou plusieurs personnes.</li>
 <li><a href="https://github.com">Github</a>, et plus généralement <a href="http://git-scm.com/">git</a> pour gérer les versions, développer de nouvelles fonctionnalités sans casser le code existant pour les autres, faire de la revue de code, et beaucoup plus...</li>
 </ul>
 <h3 id="en-dehors-du-travail">En dehors du travail</h3>
-<p>Ca stage a également été l'occasion de découvrir la vie sociale en entreprise.</p>
-<p>Chez AF83, l'organisation est très &quot;horizontale&quot;. Il n'y a pas vraiment de pression managériale qui vienne du dessus, et cela facilite le rapprochement entre les employés, à 10 heures le matin avant de commencer le travail, lorsque l'on mange ensemble, autour d'une partie de babyfoot, au le soir avant de quitter les bureaux.</p>
-<p>Cette absence de pression contribue à créer cette ambiance de travail que j'ai beaucoup appréciée, et qui permet de garder sa mativation à travailler.</p>
+<p>Ce stage a également été l'occasion de découvrir la vie sociale en entreprise.</p>
+<p>Chez AF83, l'organisation est très &quot;horizontale&quot;. Il n'y a pas vraiment de pression managériale qui vienne du dessus, et cela facilite le rapprochement entre les employés, à dix heures le matin avant de commencer le travail, lorsqu'on mange ensemble, autour d'une partie de <em>babyfoot</em>, ou le soir avant de quitter les bureaux.</p>
+<p>Cette absence de pression contribue à créer cette ambiance de travail que j'ai beaucoup appréciée, et qui permet de garder sa motivation à travailler.</p>
 <h3 id="déceptions">Déceptions</h3>
-<p>En dépit de tous les points qui font que ce stage a été une période agréable, il y a un point sur lequel j'ai été déçu.</p>
+<p>En dépit de tous les points qui font que ce stage a été une période agréable, certains points m'ont déçu, ou fait peur, concernant le domaine auquel je me destine.</p>
 <h4 id="rémunération">Rémunération</h4>
 <p>Ce point est malheureusement très courant lors de stages, quels qu'ils soient. J'ai bien conscience d'avoir été formé pendant ce stage, et d'avoir dans les premiers jours plus coûté que rapporté à l'entreprise.</p>
 <p>Cependant, j'ai l'impression d'avoir finalement apporté une certaine plus-value au projet, qui je pense valait plus que les 600€ environ que j'ai reçus pour mon travail d'un mois et demi.</p>
 <h4 id="répétition-des-tâches">Répétition des tâches</h4>
-<p>Lors de mon stage d'un mois et demi, je n'ai jamais eu l'occasion de m'ennuyer, car j'avais plein de choses à découvrir. Cependant, je pense que ce genre de projet peut devenir lassant, lorsque l'on connaît bien le code et l'on doit faire régulièrement des changements qui se ressemblent. De plus, lorsque la base de code grossit, on se retrouve avec du code que l'on n'ose plus faire évoluer radicalement car cela représente trop de travail. Dans ces conditions, j'ai peur que le travail devienne trop répétitif, et moins excitant qu'il ne l'était pour moi qui n'ai passé que peu de temps au contact du code.</p>
+<p>Lors de mon stage d'un mois et demi, je n'ai jamais eu l'occasion de m'ennuyer, car j'avais plein de choses à découvrir. Cependant, je pense que ce genre de projet peut devenir lassant, lorsqu'on connaît bien le code et que l'on doit faire régulièrement des changements qui se ressemblent. De plus, lorsque la masse de code grossit, elle acquiert une certaine inertie de sorte que l'on n'ose plus la faire évoluer radicalement car cela représenterait trop de travail. Dans ces conditions, j'ai peur que le travail devienne trop répétitif, et moins excitant qu'il ne l'était pour moi qui n'ai passé que peu de temps au contact du code.</p>
 <h2 id="ce-que-jai-appris">Ce que j'ai appris</h2>
-<p>J'ai appris à utiliser vim, à jouer au babyfoot, et à ouvrir des b***** avec un briquet. Mais je dois encore me perfectionner dans tous ces domaines.</p>
-<p>Sinon, j'ai aussi appris à utiliser <a href="http://backbonejs.org/">backbone</a>, je me suis perfectionné en <a href="http://coffeescript.org/">Coffeescript</a>, j'ai eu l'occasion de faire de la <a href="https://fr.wikipedia.org/wiki/Programmation_en_bin%C3%B4me">programmation en binôme</a> pour la première fois, ce qui est très formateur, et de manière générale, j'ai appris à travailler en équipe.</p>
+<h3 id="compétences-techniques">Compétences techniques</h3>
+<h4 id="vim">Vim</h4>
+<p>Ce stage a été l'occasion de découvrir l'éditeur de texte <a href="https://fr.wikipedia.org/wiki/Vim">vim</a>, un éditeur de texte peu intuitif mais extrêmement personnalisable et qui permet une bien meilleure productivité que ceux que j'utilisais avant. <em>Vim</em> est aujourd'hui mon éditeur de texte préféré, que j'utilise presque exclusivement pour programmer. Ce rapport lui-même a été écrit sous <em>vim</em>.</p>
+<h4 id="bibliothèques-et-langages">Bibliothèques et langages</h4>
+<p>J'ai aussi appris à utiliser <a href="http://backbonejs.org/">backbone</a>, une bibliothèque qui permet de construire des applications web complexes et d'en articuler les différents composants. J'ai découvert à la fois les avantages qu'apporte cette bibliothèque et les problèmes auxquels elle oblige à se confronter.</p>
+<p>Je me suis perfectionné en <a href="http://coffeescript.org/">Coffeescript</a>, un langage qui se compile vers du <em>Javascript</em>, et que je connaissais depuis moins d'un an.</p>
+<h3 id="autres-compétences">Autres compétences</h3>
+<h4 id="travail-en-équipe">Travail en équipe</h4>
+<p>J'ai eu l'occasion de faire de la <a href="https://fr.wikipedia.org/wiki/Programmation_en_bin%C3%B4me">programmation en binôme</a> pour la première fois, ce qui est très formateur, et de manière générale, j'ai appris à travailler en équipe sur un gros projet.</p>
+<h4 id="vie-de-lentreprise">Vie de l'entreprise</h4>
+<p>J'ai également découvert à l'occasion de ce stage la vie en entreprise, les relations entre collègues, parfois très différentes des relations entre étudiants.</p>
+<p>J'ai, je pense, beaucoup progressé au <em>babyfoot</em>, et me suis fait de nouveaux amis.</p>
 </body>
 </html>

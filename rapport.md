@@ -170,7 +170,7 @@ beaucoup appréciée, et qui permet de garder sa motivation à travailler.
 ### Déceptions
 
 En dépit de tous les points qui font que ce stage a été une période agréable,
-certains points m'ont déçus, ou fait peur, concernant le domaine auquel
+certains points m'ont déçu, ou fait peur, concernant le domaine auquel
 je me destine.
 
 #### Rémunération
@@ -205,7 +205,7 @@ que j'utilise presque exclusivement pour programmer.  Ce rapport lui-même a ét
 J'ai aussi appris à utiliser [backbone](http://backbonejs.org/), une bibliothèque
 qui permet de construire des applications web complexes et d'en articuler les
 différents composants. J'ai découvert à la fois les avantages qu'apporte cette
-bibliothèque et les problèmes auxquels elle oblige à se cofronter.
+bibliothèque et les problèmes auxquels elle oblige à se confronter.
 
 Je me suis perfectionné en [Coffeescript](http://coffeescript.org/), un langage
 qui se compile vers du *Javascript*, et que je connaissais depuis moins d'un an.
