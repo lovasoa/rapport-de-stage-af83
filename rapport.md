@@ -1,4 +1,6 @@
-# Rapport de stage
+% Rapport de stage
+% Ophir LOJKINE
+% Été 2014
 
 ## Contexte
 
@@ -36,7 +38,8 @@ de Windows, mais cela est amené à changer.
 ### Découverte de l'entreprise
 
 La première chose qui frappe lorsque l'on rentre chez AF83, c'est l'atmosphère
-décontractée qui y règne, à des lieues de ce l'on nous a décrit bien souvent.
+décontractée qui y règne, à des lieues de ce l'on nous a décrit bien souvent
+comme le monde du travail.
 
 Il n'y a pas dans cette entreprise
 
@@ -45,9 +48,9 @@ Il n'y a pas dans cette entreprise
 J'ai eu la chance de ne jamais me faire confier de tâches ingrates, et ai pu
 travailler sur des sujets qui m'intéressaient vraiment.
 
-Cepedant, j'ai travaillé sur plusieurs domaines différents, j'ai pu me pencher
+En conséquence, j'ai travaillé sur plusieurs domaines différents, j'ai pu me pencher
 sur l'architecture d'un projet complexe, mais ai aussi effectué du débogage. Je
-ne présenterai ici qu'une partie des tâches que j'ai effectuées, les plus intéressantes
+ne présenterai donc ici qu'une partie des tâches que j'ai effectuées, les plus intéressantes
 et représentatives de mon travail, je l'espère.
 
 #### Les calendriers
@@ -93,11 +96,15 @@ resource qui n'a pas encore été chargée. Elle peut alors utiliser une *promes
 un objet qui symbolise la resource, qui peut être chargée ou non.
 
 Alors, au lieu de
+
 * regarder si la resource est chargée,
 * si elle l'est, faire une opération dessus,
 * sinon, programmer une opération pour qu'elle soit effectuée lorsque la resource sera chargée,
+
 on peut simplement
+
 * dire qu'il faut faire telle opération sur telle resource.
+
 Le [système de promesses](https://www.promisejs.org/) s'occuppe alors de gérer
 le chargement de la resource.
 
@@ -110,18 +117,58 @@ Dans MAP, les promesses sont utilisées notamment pour le chargement des évène
 de calendrier, des polices de caractère et des pictogrammes associés aux grilles,
 qui doivent tous être chargés pour pouvoir dessiner les pages de calendrier.
 
-### Organisation du travail
+### Organisation du travail, gestion de projet
 
-* stand-up
-* trello
-* git, github
-* pair coding
-* communication avec le reste de l'entreprise
+Le projet est développé en utilisant la [méthode agile](https://fr.wikipedia.org/wiki/M%C3%A9thode_agile),
+censée accélérer le développement et permettre de suivre au plus près les besoins
+du client, même si ceux-ci changent.
+
+Au lieu d'avoir, par exemple une [méthode dite "en V"](https://fr.wikipedia.org/wiki/Cycle_en_V),
+où l'on passe un certain temps à élaborer l'architecture du code, mais où l'on ne programme rien,
+on s'intéresse à l'implémentation concrète des concepts au fur et à mesure qu'on les élabore.
+
+#### Communication avec le client
+Cela nécessite bien sûr une très bonne organisation, pour ne pas perdre du temps
+à écrire du code jetable, mais cela permet d'avancer rapidement sur un projet, et
+de s'adapter aux demandes du client au fur et à mesure qu'elles arrivent.
+
+Le projet MAP est ainsi organisé en "sprints" de quelques semaines, séparés par des réunions
+avec le client. J'ai eu l'occasion d'assister à deux réunions, tout d'abord par
+téléphone parce que j'étais à Nantes, puis physiquement à Paris. Ces réunions,
+organisées dans un cadre assez peu formel, commencent par une démonstration des
+fonctionnalités qui ont été codées lors du sprint précédent, suivie d'une discussion
+avec le client et de l'établissement de la liste des points à traiter lors du sprint suivant.
+
+Le projet est associé à un chef de projet, qui est très proche des développeurs.
+Loin d'être une autorité qui pèse sur les développeurs ou leur impose ses choix,
+il s'occuppe principalement de la gestion de la communication avec le client, du
+déploiement et du test du code, et de la gestion des erreurs qui peuvent survenir
+sur les serveurs en production ou chez les clients.
+
+#### Communication interne
+Tout est fait pour faciliter la communication entre développeurs, et avec le
+chef de projet.  Les bureaux d'AF83 sont en fait un grand open-space, et les
+développeurs s'adressent les uns aux autres lorsqu'ils en ont besoin.
+
+La communication interne est également facilitée par plusieurs outils:
+
+* [Trello](http://trello.com), qui est utilisé comme un gestionnaire de tâches.
+  À chaque action à faire on associe une "carte trello", à laquelle on peut associer
+  une ou plusieurs personnes.
+* [Github](https://github.com), et plus généralement [git](http://git-scm.com/) pour gérer
+  les versions, développer de nouvelles fonctionnalités sans casser le code existant
+  pour les autres, faire de la revue de code, et beaucoup plus...
 
 ### En dehors du travail
-* Babyfoot
-* repas
-* le soir
+Ca stage a également été l'occasion de découvrir la vie sociale en entreprise.
+
+Chez AF83, l'organisation est très "horizontale". Il n'y a pas vraiment de
+pression managériale qui vienne du dessus, et cela facilite le rapprochement entre les employés,
+à 10 heures le matin avant de commencer le travail, lorsque l'on mange 
+ensemble, autour d'une partie de babyfoot, au le soir avant de quitter les bureaux.
+
+Cette absence de pression contribue à créer cette ambiance de travail que j'ai
+beaucoup appréciée, et qui permet de garder sa mativation à travailler.
 
 ### Déceptions
 
@@ -136,6 +183,15 @@ premiers jours plus coûté que rapporté à l'entreprise.
 Cependant, j'ai l'impression d'avoir finalement apporté une certaine plus-value
 au projet, qui je pense valait plus que les 600€ environ que j'ai reçus pour mon
 travail d'un mois et demi.
+
+#### Répétition des tâches
+Lors de mon stage d'un mois et demi, je n'ai jamais eu l'occasion de m'ennuyer,
+car j'avais plein de choses à découvrir. Cependant, je pense que ce genre de projet
+peut devenir lassant, lorsque l'on connaît bien le code et l'on doit faire régulièrement des changements
+qui se ressemblent. De plus, lorsque la base de code grossit, on se retrouve avec
+du code que l'on n'ose plus faire évoluer radicalement car cela représente trop
+de travail. Dans ces conditions, j'ai peur que le travail devienne trop répétitif, et moins
+excitant qu'il ne l'était pour moi qui n'ai passé que peu de temps au contact du code.
 
 ## Ce que j'ai appris
 
